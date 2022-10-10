@@ -3,6 +3,8 @@ import React from 'react';
 import { ActivityIndicator } from "react-native";
 import AppNavigator from './src/navigation';
 import {  useFonts } from "expo-font";
+import { Provider } from "react-redux";
+import store from "./src/store";
 
 
 export default function App() {
@@ -16,7 +18,9 @@ export default function App() {
   }
   
   return (
-    <AppNavigator />
+    <Provider store={store}>
+      <AppNavigator />
+    </Provider>
   );
 }
 
