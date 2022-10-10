@@ -9,10 +9,10 @@ const Product = ({navigation, route}) => {
     return (
         <View style={styles.container}>
             <Text>id: {product.id}</Text>
-            <Text>{product.title}</Text>
+            <Text style={styles.title}>{product.title}</Text>
             <Text>{product.description}</Text>
             <Text>${product.price}</Text>
-            <Text>weight: {product.weight}</Text>
+            <Text>Peso: {product.weight}</Text>
         </View>
     )
 }
